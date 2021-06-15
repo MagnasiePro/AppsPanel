@@ -47,8 +47,7 @@ struct newsView: View {
     }
     
     var body: some View {
-        List(news) { newsUnit in
-            
+        List(news.sorted { $0.published_at > $1.published_at}) { newsUnit in
             HStack {
                 Image("https://via.placeholder.com/150")
                     .data(url: URL(string: newsUnit.picture_url ?? "https://via.placeholder.com/150")!)

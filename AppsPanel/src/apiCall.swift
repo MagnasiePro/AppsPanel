@@ -22,7 +22,7 @@ class apiCall {
     let X_AP_DeviceUID = "Documentation"
     let X_AP_Key = "uD4Muli8nO6nzkSlsNM3d1Pm"
     let language = "fr-FR"
-
+    
     func registerUser(name: String, email: String, phone: String, completion: @escaping (Bool) -> ()) {
         let url = URL(string: url + "/authentication/register")!
         var request = URLRequest(url: url)
@@ -76,19 +76,21 @@ class apiCall {
     func getNews(completion:@escaping ([News]) -> ()) {
         let url = URL(string: url + "/events")!
         var request = URLRequest(url: url)
-
+        
         request.setValue("multipart/form-data", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue(language, forHTTPHeaderField: "Accept-Language")
         request.setValue(X_AP_Key, forHTTPHeaderField: "X-AP-Key")
         request.setValue(X_AP_DeviceUID, forHTTPHeaderField: "X-AP-DeviceUID")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
+        
         URLSession.shared.dataTask(with: request) { (data, _, _) in
-            let users = try! JSONDecoder().decode([News].self, from: data!)
-            
-            DispatchQueue.main.async {
-                completion(users)
+            if (data != nil) {
+                let users = try! JSONDecoder().decode([News].self, from: data!)
+                
+                DispatchQueue.main.async {
+                    completion(users)
+                }
             }
         }
         .resume()

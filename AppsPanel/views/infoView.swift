@@ -51,7 +51,6 @@ struct Webview : UIViewRepresentable {
 
 struct infoView: View {
     var request = URLRequest(url: URL(string: "https://test-pgt-dev.apnl.ws/html")!)
-
     
     init() {
         request.setValue("Documentation", forHTTPHeaderField: "X-AP-DeviceUID")
