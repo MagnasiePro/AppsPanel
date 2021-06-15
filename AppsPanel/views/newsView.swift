@@ -22,6 +22,8 @@ struct newsView: View {
     
     @State var news: [News] = []
     let formatter = DateFormatter()
+    @State var isLoaded = false
+    @State private var showingSheet = false
     
     init() {
         formatter.timeStyle = .long
@@ -32,7 +34,7 @@ struct newsView: View {
         let date1 = calendar.startOfDay(for: Date())
         let date2 = calendar.startOfDay(for: Date(timeIntervalSince1970: TimeInterval(date)))
         let diff = calendar.dateComponents([.day], from: date1, to: date2).day
-
+        
         switch diff {
         case 0:
             return Text("today")
@@ -65,10 +67,21 @@ struct newsView: View {
                     getDate(date: newsUnit.published_at)
                 }
             }
+            .gesture(TapGesture()
+                        .onEnded({ _ in
+                            showingSheet = true
+                        }))
+            .sheet(isPresented: $showingSheet) {
+                Image("https://via.placeholder.com/150")
+                    .data(url: URL(string: newsUnit.picture_url ?? "https://via.placeholder.com/150")!)
+            }
         }
         .onAppear() {
-            apiCall().getNews { data in
-                self.news = data
+            if (isLoaded == false) {
+                apiCall().getNews { data in
+                    self.news = data
+                    isLoaded = true
+                }
             }
         }
     }
