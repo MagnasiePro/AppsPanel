@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  AppsPanel
+
+  Created by Camille Maurel on 15/06/2021.
+  
+*/
+"email" = "Adresse email";
+"name" = "Nom";
+"phone" = "Numéro de téléphone";
+"register" = "S'inscrire";
+"information-verif" = "Vos informations sont elles valides ?";
+"submit" = "Envoyer l'inscription";
+"cancel" = "Annuler";

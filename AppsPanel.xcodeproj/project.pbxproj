@@ -13,6 +13,8 @@
 		85CBE5B926787A0200E6D7C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CBE5B826787A0200E6D7C5 /* Preview Assets.xcassets */; };
 		85CBE5BB26787A0200E6D7C5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE5BA26787A0200E6D7C5 /* Persistence.swift */; };
 		85CBE5BE26787A0300E6D7C5 /* AppsPanel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE5BC26787A0200E6D7C5 /* AppsPanel.xcdatamodeld */; };
+		85CBE5C626788CBE00E6D7C5 /* registerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE5C526788CBE00E6D7C5 /* registerView.swift */; };
+		85E5ED982678999A007FD196 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85E5ED9A2678999A007FD196 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		85CBE5BA26787A0200E6D7C5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		85CBE5BD26787A0200E6D7C5 /* AppsPanel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppsPanel.xcdatamodel; sourceTree = "<group>"; };
 		85CBE5BF26787A0300E6D7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85CBE5C526788CBE00E6D7C5 /* registerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerView.swift; sourceTree = "<group>"; };
+		85E5ED992678999A007FD196 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		85E5ED9B2678999E007FD196 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,8 @@
 		85CBE5B0267879FF00E6D7C5 /* AppsPanel */ = {
 			isa = PBXGroup;
 			children = (
+				85E5ED9C2678A20D007FD196 /* src */,
+				85CBE5C726788CC600E6D7C5 /* views */,
 				85CBE5B1267879FF00E6D7C5 /* AppsPanelApp.swift */,
 				85CBE5B3267879FF00E6D7C5 /* ContentView.swift */,
 				85CBE5B526787A0200E6D7C5 /* Assets.xcassets */,
@@ -63,6 +70,7 @@
 				85CBE5BF26787A0300E6D7C5 /* Info.plist */,
 				85CBE5BC26787A0200E6D7C5 /* AppsPanel.xcdatamodeld */,
 				85CBE5B726787A0200E6D7C5 /* Preview Content */,
+				85E5ED9A2678999A007FD196 /* Localizable.strings */,
 			);
 			path = AppsPanel;
 			sourceTree = "<group>";
@@ -73,6 +81,21 @@
 				85CBE5B826787A0200E6D7C5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85CBE5C726788CC600E6D7C5 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				85CBE5C526788CBE00E6D7C5 /* registerView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		85E5ED9C2678A20D007FD196 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +139,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 85CBE5A5267879FE00E6D7C5;
 			productRefGroup = 85CBE5AF267879FF00E6D7C5 /* Products */;
@@ -133,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CBE5B926787A0200E6D7C5 /* Preview Assets.xcassets in Resources */,
+				85E5ED982678999A007FD196 /* Localizable.strings in Resources */,
 				85CBE5B626787A0200E6D7C5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CBE5BB26787A0200E6D7C5 /* Persistence.swift in Sources */,
+				85CBE5C626788CBE00E6D7C5 /* registerView.swift in Sources */,
 				85CBE5B4267879FF00E6D7C5 /* ContentView.swift in Sources */,
 				85CBE5BE26787A0300E6D7C5 /* AppsPanel.xcdatamodeld in Sources */,
 				85CBE5B2267879FF00E6D7C5 /* AppsPanelApp.swift in Sources */,
@@ -152,6 +178,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		85E5ED9A2678999A007FD196 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85E5ED992678999A007FD196 /* en */,
+				85E5ED9B2678999E007FD196 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		85CBE5C026787A0300E6D7C5 /* Debug */ = {
