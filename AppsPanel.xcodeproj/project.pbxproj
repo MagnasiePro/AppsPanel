@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		858E92B12678CD5600D392FE /* newsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858E92B02678CD5500D392FE /* newsView.swift */; };
+		858E92B52678CF2D00D392FE /* apiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858E92B42678CF2D00D392FE /* apiCall.swift */; };
 		85CBE5B2267879FF00E6D7C5 /* AppsPanelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE5B1267879FF00E6D7C5 /* AppsPanelApp.swift */; };
 		85CBE5B4267879FF00E6D7C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE5B3267879FF00E6D7C5 /* ContentView.swift */; };
 		85CBE5B626787A0200E6D7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CBE5B526787A0200E6D7C5 /* Assets.xcassets */; };
@@ -15,12 +17,12 @@
 		85CBE5BE26787A0300E6D7C5 /* AppsPanel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE5BC26787A0200E6D7C5 /* AppsPanel.xcdatamodeld */; };
 		85CBE5C626788CBE00E6D7C5 /* registerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE5C526788CBE00E6D7C5 /* registerView.swift */; };
 		85E5ED982678999A007FD196 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85E5ED9A2678999A007FD196 /* Localizable.strings */; };
-		85E5ED9E2678A25F007FD196 /* registerFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5ED9D2678A25F007FD196 /* registerFunc.swift */; };
 		85E5EDA02678B2E9007FD196 /* infoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5ED9F2678B2E9007FD196 /* infoView.swift */; };
-		85E5EDA22678BA0F007FD196 /* infosFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5EDA12678BA0F007FD196 /* infosFunc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		858E92B02678CD5500D392FE /* newsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsView.swift; sourceTree = "<group>"; };
+		858E92B42678CF2D00D392FE /* apiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiCall.swift; sourceTree = "<group>"; };
 		85CBE5AE267879FF00E6D7C5 /* AppsPanel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppsPanel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CBE5B1267879FF00E6D7C5 /* AppsPanelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPanelApp.swift; sourceTree = "<group>"; };
 		85CBE5B3267879FF00E6D7C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,9 +34,7 @@
 		85CBE5C526788CBE00E6D7C5 /* registerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerView.swift; sourceTree = "<group>"; };
 		85E5ED992678999A007FD196 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		85E5ED9B2678999E007FD196 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		85E5ED9D2678A25F007FD196 /* registerFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerFunc.swift; sourceTree = "<group>"; };
 		85E5ED9F2678B2E9007FD196 /* infoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoView.swift; sourceTree = "<group>"; };
-		85E5EDA12678BA0F007FD196 /* infosFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infosFunc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +94,7 @@
 			children = (
 				85CBE5C526788CBE00E6D7C5 /* registerView.swift */,
 				85E5ED9F2678B2E9007FD196 /* infoView.swift */,
+				858E92B02678CD5500D392FE /* newsView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -101,8 +102,7 @@
 		85E5ED9C2678A20D007FD196 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				85E5ED9D2678A25F007FD196 /* registerFunc.swift */,
-				85E5EDA12678BA0F007FD196 /* infosFunc.swift */,
+				858E92B42678CF2D00D392FE /* apiCall.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -179,11 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				85E5EDA02678B2E9007FD196 /* infoView.swift in Sources */,
-				85E5ED9E2678A25F007FD196 /* registerFunc.swift in Sources */,
+				858E92B12678CD5600D392FE /* newsView.swift in Sources */,
 				85CBE5BB26787A0200E6D7C5 /* Persistence.swift in Sources */,
 				85CBE5C626788CBE00E6D7C5 /* registerView.swift in Sources */,
 				85CBE5B4267879FF00E6D7C5 /* ContentView.swift in Sources */,
-				85E5EDA22678BA0F007FD196 /* infosFunc.swift in Sources */,
+				858E92B52678CF2D00D392FE /* apiCall.swift in Sources */,
 				85CBE5BE26787A0300E6D7C5 /* AppsPanel.xcdatamodeld in Sources */,
 				85CBE5B2267879FF00E6D7C5 /* AppsPanelApp.swift in Sources */,
 			);

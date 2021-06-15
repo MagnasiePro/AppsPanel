@@ -44,7 +44,7 @@ struct registerView: View {
                 title: Text("information-verif"),
                 buttons: [
                     .cancel(Text("cancel")) { print(self.showActionSheet) },
-                    .default(Text("submit")) {registerUser(name: self.name, email: self.email, phone: self.phone)},
+                    .default(Text("submit")) {apiCall().registerUser(name: self.name, email: self.email, phone: self.phone)},
                 ]
             )
         }

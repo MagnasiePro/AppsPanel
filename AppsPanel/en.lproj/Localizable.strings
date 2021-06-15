@@ -14,4 +14,9 @@
 "submit" = "Submit registration";
 "cancel" = "Cancel";
 "info" = "Infos";
+"news" = "News";
+"today" = "Today";
+"yesterday" = "Yesterday";
+"since" = "Posted since ";
+"days" = " days";
 
