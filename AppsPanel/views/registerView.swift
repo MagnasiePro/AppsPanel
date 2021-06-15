@@ -32,7 +32,7 @@ struct registerView: View {
             Button(action: {
                 self.showActionSheet = true
             }) {
-                showingSuccess ? Text("register") : Text("success")
+                showingSuccess ? Text("success") : Text("register")
             }
             .foregroundColor(.white)
             .padding(.vertical, 10.0)
@@ -52,7 +52,6 @@ struct registerView: View {
                     .cancel(Text("cancel")) { print(self.showActionSheet) },
                     .default(Text("submit")) {apiCall().registerUser(name: self.name, email: self.email, phone: self.phone) { result in
                         if (result) {
-                            print(result)
                             showingSuccess = true
                         } else {
                             showingErrorAlert = true
