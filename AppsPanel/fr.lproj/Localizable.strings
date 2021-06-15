@@ -12,3 +12,9 @@
 "information-verif" = "Vos informations sont elles valides ?";
 "submit" = "Envoyer l'inscription";
 "cancel" = "Annuler";
+"info" = "Infos";
+"news" = "Actualités";
+"today" = "Aujourd'hui";
+"yesterday" = "Hier";
+"since" = "Posté il y a ";
+"days" = " jours";

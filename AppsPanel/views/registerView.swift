@@ -12,6 +12,8 @@ struct registerView: View {
     @State private var name: String = ""
     @State private var email: String = ""
     @State private var phone: String = ""
+    @State private var showingSuccess = false
+    @State private var showingErrorAlert = false
     
     var body: some View {
         VStack {
@@ -30,7 +32,7 @@ struct registerView: View {
             Button(action: {
                 self.showActionSheet = true
             }) {
-                Text("register")
+                showingSuccess ? Text("register") : Text("success")
             }
             .foregroundColor(.white)
             .padding(.vertical, 10.0)
@@ -39,12 +41,23 @@ struct registerView: View {
             .cornerRadius(8)
         }
         .padding(.horizontal)
+
+        .alert(isPresented: $showingErrorAlert) {
+            Alert(title: Text("Error"), message: Text("An error has occured"), dismissButton: .default(Text("Ok")))
+        }
         .actionSheet(isPresented: $showActionSheet) {
             ActionSheet(
                 title: Text("information-verif"),
                 buttons: [
                     .cancel(Text("cancel")) { print(self.showActionSheet) },
-                    .default(Text("submit")) {apiCall().registerUser(name: self.name, email: self.email, phone: self.phone)},
+                    .default(Text("submit")) {apiCall().registerUser(name: self.name, email: self.email, phone: self.phone) { result in
+                        if (result) {
+                            print(result)
+                            showingSuccess = true
+                        } else {
+                            showingErrorAlert = true
+                        }
+                    }},
                 ]
             )
         }
