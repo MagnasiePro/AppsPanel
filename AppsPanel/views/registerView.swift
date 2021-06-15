@@ -17,13 +17,16 @@ struct registerView: View {
         VStack {
             TextField("name", text: $name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textContentType(.name)
             TextField("email", text: $email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.emailAddress)
                 .disableAutocorrection(true)
+                .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
             TextField("phone", text: $phone)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.phonePad)
+                .textContentType(.telephoneNumber)
             Button(action: {
                 self.showActionSheet = true
             }) {
@@ -41,7 +44,7 @@ struct registerView: View {
                 title: Text("information-verif"),
                 buttons: [
                     .cancel(Text("cancel")) { print(self.showActionSheet) },
-                    .default(Text("submit")),
+                    .default(Text("submit")) {registerUser(name: self.name, email: self.email, phone: self.phone)},
                 ]
             )
         }
